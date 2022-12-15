@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/chooseFragment"
+        android:title="@string/random_bottom"
+        android:icon="@drawable/ic_random" />
+    <item
+        android:id="@+id/saveChooseFragment"
+        android:title="@string/save_bottom"
+        android:icon="@drawable/ic_save" />
+</menu>
