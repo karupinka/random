@@ -35,6 +35,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    testOptions {
+        unitTests {
+            returnDefaultValues = true
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -85,4 +91,21 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
     implementation "androidx.room:room-paging:$room_version"
     implementation("androidx.room:room-rxjava2:$room_version")
+
+    // Test
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:3.10.0'
+    testImplementation 'androidx.test.ext:junit:1.1.4'
+    testImplementation( "androidx.test.espresso:espresso-core:3.5.0")
+    testImplementation( "androidx.test.espresso:espresso-contrib:3.5.0")
+
+    // Espresso dependencies
+    androidTestImplementation( "androidx.test.espresso:espresso-core:3.5.0")
+    androidTestImplementation( "androidx.test.espresso:espresso-contrib:3.5.0")
+
+    debugImplementation("androidx.test.espresso:espresso-core:3.5.0")
+    debugImplementation("androidx.test:runner:1.5.0")
+    debugImplementation("androidx.test:rules:1.5.0")
+    debugImplementation("androidx.test.ext:junit-ktx:1.1.4")
+    testImplementation("org.robolectric:robolectric:4.9")
 }
