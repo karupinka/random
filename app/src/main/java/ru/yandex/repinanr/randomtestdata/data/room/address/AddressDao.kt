@@ -1,8 +1,6 @@
 package ru.yandex.repinanr.randomtestdata.data.room.address
 
-import androidx.lifecycle.LiveData
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy.REPLACE
 import androidx.room.Query
@@ -14,15 +12,12 @@ interface AddressDao {
     @Insert(onConflict = REPLACE)
     suspend fun insertAddress(address: AddressEntity)
 
-    @Delete
-    suspend fun deleteAddress(address: AddressEntity)
-
     @Query("DELETE FROM ADDRESSES WHERE id=:id")
-    suspend fun deleteAddress(id: String)
+    suspend fun deleteAddress(id: Long)
 
     @Query("SELECT * FROM ADDRESSES")
-    fun getAllAddresses(): LiveData<List<AddressEntity>>
+    suspend fun getAllAddresses(): List<AddressEntity>
 
     @Query("SELECT * FROM ADDRESSES WHERE id=:id")
-    suspend fun getAddress(id: String): AddressEntity?
+    suspend fun getAddress(id: Long): AddressEntity?
 }

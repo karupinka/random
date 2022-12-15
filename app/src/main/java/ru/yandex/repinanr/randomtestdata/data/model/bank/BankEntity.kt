@@ -13,7 +13,7 @@ import androidx.room.PrimaryKey
 )
 data class BankEntity(
     @PrimaryKey
-    val id: Int,
+    val id: Long,
     @ColumnInfo(name = "account_number")
     val accountNumber: String,
     val iban: String,

@@ -3,7 +3,7 @@ package ru.yandex.repinanr.randomtestdata.data.model.user
 import com.google.gson.annotations.SerializedName
 
 data class ResponseUserModel(
-    val id: Int,
+    val id: Long,
     val password: String,
     @SerializedName("first_name")
     val firstName: String,

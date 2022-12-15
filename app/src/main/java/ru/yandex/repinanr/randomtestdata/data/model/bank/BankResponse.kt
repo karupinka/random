@@ -3,7 +3,7 @@ package ru.yandex.repinanr.randomtestdata.data.model.bank
 import com.google.gson.annotations.SerializedName
 
 data class BankResponse(
-    val id: Int,
+    val id: Long,
     @SerializedName("account_number")
     val accountNumber: String,
     val iban: String,

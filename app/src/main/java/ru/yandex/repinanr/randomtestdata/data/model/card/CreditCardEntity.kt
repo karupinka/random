@@ -13,7 +13,7 @@ import androidx.room.PrimaryKey
 )
 data class CreditCardEntity(
     @PrimaryKey
-    val id: Int,
+    val id: Long,
     @ColumnInfo(name = "credit_card_number")
     val number: String,
     @ColumnInfo(name = "credit_card_expiry_date")

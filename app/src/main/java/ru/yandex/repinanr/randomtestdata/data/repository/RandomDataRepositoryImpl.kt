@@ -1,12 +1,10 @@
 package ru.yandex.repinanr.randomtestdata.data.repository
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.Transformations
 import ru.yandex.repinanr.randomtestdata.data.mapper.RandomDataMapper
-import ru.yandex.repinanr.randomtestdata.data.model.address.AddressModel
-import ru.yandex.repinanr.randomtestdata.data.model.bank.BankModel
-import ru.yandex.repinanr.randomtestdata.data.model.card.CreditCardModel
-import ru.yandex.repinanr.randomtestdata.data.model.user.UserModel
+import ru.yandex.repinanr.randomtestdata.data.model.common.AddressModel
+import ru.yandex.repinanr.randomtestdata.data.model.common.BankModel
+import ru.yandex.repinanr.randomtestdata.data.model.common.CreditCardModel
+import ru.yandex.repinanr.randomtestdata.data.model.common.UserModel
 import ru.yandex.repinanr.randomtestdata.data.remote.RandomDataService
 import ru.yandex.repinanr.randomtestdata.data.room.address.AddressDao
 import ru.yandex.repinanr.randomtestdata.data.room.bank.BankDao
@@ -25,12 +23,10 @@ class RandomDataRepositoryImpl @Inject constructor(
 ) : RandomDataRepository {
     override suspend fun getUser() = mapper.mapUserResponseToUserModel(service.getUser())
 
-    override suspend fun getSaveUsers() =
-        Transformations.map(userDao.getAllUsers()) {
-            mapper.mapListUserEntityToListUserModel(it)
-        }
+    suspend override fun getSaveUsers() =
+        mapper.mapListUserEntityToListUserModel(userDao.getAllUsers())
 
-    override suspend fun getSaveUser(id: String): UserModel? {
+    override suspend fun getSaveUser(id: Long): UserModel? {
         userDao.getUser(id)?.let {
             return mapper.mapUserEntityToUserModel(it)
         }
@@ -41,22 +37,16 @@ class RandomDataRepositoryImpl @Inject constructor(
         userDao.insertUser(mapper.mapUserModelToUserEntity(user))
     }
 
-    override suspend fun deleteSaveUser(user: UserModel) {
-        userDao.deleteUser(mapper.mapUserModelToUserEntity(user))
-    }
-
-    override suspend fun deleteSaveUser(id: String) {
+    override suspend fun deleteSaveUser(id: Long) {
         userDao.deleteUser(id)
     }
 
     override suspend fun getBank() = mapper.mapBankResponseToBankModel(service.getBank())
 
-    override suspend fun getSaveBanks(): LiveData<List<BankModel>> =
-        Transformations.map(bankDao.getAllBanks()) {
-            mapper.mapListBankEntityToListBankModel(it)
-        }
+    override suspend fun getSaveBanks(): List<BankModel> =
+        mapper.mapListBankEntityToListBankModel(bankDao.getAllBanks())
 
-    override suspend fun getSaveBank(id: String): BankModel? {
+    override suspend fun getSaveBank(id: Long): BankModel? {
         bankDao.getBank(id)?.let {
             return mapper.mapBankEntityToBankModel(it)
         }
@@ -67,23 +57,17 @@ class RandomDataRepositoryImpl @Inject constructor(
         bankDao.insertBank(mapper.mapBankModelToBankEntity(bank))
     }
 
-    override suspend fun deleteSaveBank(bank: BankModel) {
-        bankDao.deleteBank(mapper.mapBankModelToBankEntity(bank))
-    }
-
-    override suspend fun deleteSaveBank(id: String) {
+    override suspend fun deleteSaveBank(id: Long) {
         bankDao.deleteBank(id)
     }
 
     override suspend fun getCreditCard() =
         mapper.mapCreditCardResponseToCreditCardModel(service.getCreditCard())
 
-    override suspend fun getSaveCreditCards(): LiveData<List<CreditCardModel>> =
-        Transformations.map(creditCardDao.getAllCard()) {
-            mapper.mapListCreditCardEntityToListCreditCardModel(it)
-        }
+    override suspend fun getSaveCreditCards(): List<CreditCardModel> =
+        mapper.mapListCreditCardEntityToListCreditCardModel(creditCardDao.getAllCard())
 
-    override suspend fun getSaveCreditCard(id: String): CreditCardModel? {
+    override suspend fun getSaveCreditCard(id: Long): CreditCardModel? {
         creditCardDao.getCard(id)?.let {
             return mapper.mapCreditCardEntityToCreditCardModel(it)
         }
@@ -94,23 +78,17 @@ class RandomDataRepositoryImpl @Inject constructor(
         creditCardDao.insertCard(mapper.mapCreditCardModelToCreditCardEntity(creditCard))
     }
 
-    override suspend fun deleteSaveCreditCard(creditCard: CreditCardModel) {
-        creditCardDao.deleteCard(mapper.mapCreditCardModelToCreditCardEntity(creditCard))
-    }
-
-    override suspend fun deleteSaveCreditCard(id: String) {
+    override suspend fun deleteSaveCreditCard(id: Long) {
         creditCardDao.deleteCard(id)
     }
 
     override suspend fun getAddress() =
         mapper.mapAddressResponseToAddressModel(service.getAddresses())
 
-    override suspend fun getSaveAddresses(): LiveData<List<AddressModel>> =
-        Transformations.map(addressDao.getAllAddresses()) {
-            mapper.mapListAddressEntityToListAddressModel(it)
-        }
+    override suspend fun getSaveAddresses(): List<AddressModel> =
+        mapper.mapListAddressEntityToListAddressModel(addressDao.getAllAddresses())
 
-    override suspend fun getSaveAddress(id: String): AddressModel? {
+    override suspend fun getSaveAddress(id: Long): AddressModel? {
         addressDao.getAddress(id)?.let {
             return mapper.mapAddressEntityToAddressModel(it)
         }
@@ -121,11 +99,7 @@ class RandomDataRepositoryImpl @Inject constructor(
         addressDao.insertAddress(mapper.mapAddressModelToAddressEntity(address))
     }
 
-    override suspend fun deleteSaveAddress(address: AddressModel) {
-        addressDao.deleteAddress(mapper.mapAddressModelToAddressEntity(address))
-    }
-
-    override suspend fun deleteSaveAddress(id: String) {
+    override suspend fun deleteSaveAddress(id: Long) {
         addressDao.deleteAddress(id)
     }
 }

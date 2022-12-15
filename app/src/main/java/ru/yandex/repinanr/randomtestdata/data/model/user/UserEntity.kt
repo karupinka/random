@@ -13,7 +13,7 @@ import androidx.room.PrimaryKey
 )
 data class UserEntity(
     @PrimaryKey
-    val id: Int,
+    val id: Long,
     val password: String,
     @ColumnInfo(name = "first_name")
     val firstName: String,

@@ -1,17 +1,17 @@
 package ru.yandex.repinanr.randomtestdata.data.mapper
 
 import ru.yandex.repinanr.randomtestdata.data.model.address.AddressEntity
-import ru.yandex.repinanr.randomtestdata.data.model.address.AddressModel
 import ru.yandex.repinanr.randomtestdata.data.model.address.AddressResponse
 import ru.yandex.repinanr.randomtestdata.data.model.bank.BankEntity
-import ru.yandex.repinanr.randomtestdata.data.model.bank.BankModel
 import ru.yandex.repinanr.randomtestdata.data.model.bank.BankResponse
 import ru.yandex.repinanr.randomtestdata.data.model.card.CreditCardEntity
-import ru.yandex.repinanr.randomtestdata.data.model.card.CreditCardModel
 import ru.yandex.repinanr.randomtestdata.data.model.card.CreditCardResponse
+import ru.yandex.repinanr.randomtestdata.data.model.common.AddressModel
+import ru.yandex.repinanr.randomtestdata.data.model.common.BankModel
+import ru.yandex.repinanr.randomtestdata.data.model.common.CreditCardModel
+import ru.yandex.repinanr.randomtestdata.data.model.common.UserModel
 import ru.yandex.repinanr.randomtestdata.data.model.user.ResponseUserModel
 import ru.yandex.repinanr.randomtestdata.data.model.user.UserEntity
-import ru.yandex.repinanr.randomtestdata.data.model.user.UserModel
 import javax.inject.Inject
 
 class RandomDataMapper @Inject constructor() {

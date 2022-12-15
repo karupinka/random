@@ -3,7 +3,7 @@ package ru.yandex.repinanr.randomtestdata.data.model.address
 import com.google.gson.annotations.SerializedName
 
 data class AddressResponse(
-    val id: Int,
+    val id: Long,
     @SerializedName("city")
     val city: String,
     @SerializedName("street_name")

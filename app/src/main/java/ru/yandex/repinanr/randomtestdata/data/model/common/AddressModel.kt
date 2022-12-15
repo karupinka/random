@@ -1,7 +1,7 @@
-package ru.yandex.repinanr.randomtestdata.data.model.address
+package ru.yandex.repinanr.randomtestdata.data.model.common
 
 data class AddressModel(
-    val id: Int,
+    override val id: Long,
     val city: String,
     val streetName: String,
     val streetAddress: String,
@@ -23,4 +23,4 @@ data class AddressModel(
     val latitude: Double,
     val longitude: Double,
     val fullAddress: String
-)
+) : DataModel()

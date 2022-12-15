@@ -8,15 +8,15 @@ import ru.yandex.repinanr.randomtestdata.data.model.user.ResponseUserModel
 
 interface RandomDataService {
 
-    @GET("/users")
+    @GET("users")
     suspend fun getUser(): ResponseUserModel
 
-    @GET("/addresses")
+    @GET("addresses")
     suspend fun getAddresses(): AddressResponse
 
-    @GET("/banks")
+    @GET("banks")
     suspend fun getBank(): BankResponse
 
-    @GET("/credit_cards")
+    @GET("credit_cards")
     suspend fun getCreditCard(): CreditCardResponse
 }

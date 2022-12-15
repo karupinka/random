@@ -13,7 +13,7 @@ import androidx.room.PrimaryKey
 )
 data class AddressEntity(
     @PrimaryKey
-    val id: Int,
+    val id: Long,
     val city: String,
     @ColumnInfo(name = "street_name")
     val streetName: String,

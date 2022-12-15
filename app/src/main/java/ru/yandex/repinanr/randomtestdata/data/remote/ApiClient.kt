@@ -9,8 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
-    private const val BASE_URL = "https://random-data-api.com/api/v2"
-    private const val API_KEY = ""
+    private const val BASE_URL = "https://random-data-api.com/api/v2/"
 
     val client = OkHttpClient.Builder()
         .addInterceptor(HttpLoggingInterceptor().apply {
