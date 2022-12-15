@@ -23,6 +23,12 @@ interface DataModule {
 
         @Provides
         @ApplicationScope
+        fun provideAppDb(application: Application): RandomDataDb {
+            return RandomDataDb.getInstance(application)
+        }
+
+        @Provides
+        @ApplicationScope
         fun bindUserDao(application: Application): UserDao {
             return RandomDataDb.getInstance(application).getUserDao()
         }
