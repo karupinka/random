@@ -8,8 +8,8 @@ import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import ru.yandex.repinanr.randomtestdata.data.mapper.DataItemMapper
-import ru.yandex.repinanr.randomtestdata.data.model.common.DataModel
 import ru.yandex.repinanr.randomtestdata.domain.DataTypes
+import ru.yandex.repinanr.randomtestdata.domain.model.DataModel
 import ru.yandex.repinanr.randomtestdata.domain.usecases.GetDataUseCase
 import ru.yandex.repinanr.randomtestdata.domain.usecases.GetSaveDataUseCase
 import ru.yandex.repinanr.randomtestdata.domain.usecases.SaveDataUseCase

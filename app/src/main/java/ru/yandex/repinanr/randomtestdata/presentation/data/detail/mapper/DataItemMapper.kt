@@ -1,7 +1,7 @@
 package ru.yandex.repinanr.randomtestdata.data.mapper
 
 import ru.yandex.repinanr.randomtestdata.R
-import ru.yandex.repinanr.randomtestdata.data.model.common.*
+import ru.yandex.repinanr.randomtestdata.domain.model.*
 import ru.yandex.repinanr.randomtestdata.presentation.data.detail.DataItemModel
 import javax.inject.Inject
 

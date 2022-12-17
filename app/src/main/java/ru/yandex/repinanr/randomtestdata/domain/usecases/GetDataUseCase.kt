@@ -1,8 +1,8 @@
 package ru.yandex.repinanr.randomtestdata.domain.usecases
 
-import ru.yandex.repinanr.randomtestdata.data.model.common.DataModel
 import ru.yandex.repinanr.randomtestdata.domain.DataTypes
 import ru.yandex.repinanr.randomtestdata.domain.RandomDataRepository
+import ru.yandex.repinanr.randomtestdata.domain.model.DataModel
 import javax.inject.Inject
 
 class GetDataUseCase @Inject constructor(

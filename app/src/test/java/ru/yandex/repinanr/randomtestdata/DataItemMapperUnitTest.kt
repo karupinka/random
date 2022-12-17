@@ -4,19 +4,10 @@ import org.junit.Test
 import org.junit.Assert.*
 import org.junit.Before
 import ru.yandex.repinanr.randomtestdata.data.mapper.DataItemMapper
-import ru.yandex.repinanr.randomtestdata.data.mapper.RandomDataMapper
-import ru.yandex.repinanr.randomtestdata.data.model.address.AddressEntity
-import ru.yandex.repinanr.randomtestdata.data.model.address.AddressResponse
-import ru.yandex.repinanr.randomtestdata.data.model.bank.BankEntity
-import ru.yandex.repinanr.randomtestdata.data.model.bank.BankResponse
-import ru.yandex.repinanr.randomtestdata.data.model.card.CreditCardEntity
-import ru.yandex.repinanr.randomtestdata.data.model.card.CreditCardResponse
 import ru.yandex.repinanr.randomtestdata.data.model.common.AddressModel
 import ru.yandex.repinanr.randomtestdata.data.model.common.BankModel
 import ru.yandex.repinanr.randomtestdata.data.model.common.CreditCardModel
 import ru.yandex.repinanr.randomtestdata.data.model.common.UserModel
-import ru.yandex.repinanr.randomtestdata.data.model.user.ResponseUserModel
-import ru.yandex.repinanr.randomtestdata.data.model.user.UserEntity
 import ru.yandex.repinanr.randomtestdata.presentation.data.detail.DataItemModel
 
 class DataItemMapperUnitTest {

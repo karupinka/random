@@ -3,7 +3,7 @@ package ru.yandex.repinanr.randomtestdata
 import org.junit.Test
 import org.junit.Assert.*
 import org.junit.Before
-import ru.yandex.repinanr.randomtestdata.data.mapper.RandomDataMapper
+import ru.yandex.repinanr.randomtestdata.domain.mapper.RandomDataMapper
 import ru.yandex.repinanr.randomtestdata.data.model.address.AddressEntity
 import ru.yandex.repinanr.randomtestdata.data.model.address.AddressResponse
 import ru.yandex.repinanr.randomtestdata.data.model.bank.BankEntity
