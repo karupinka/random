@@ -1,6 +1,6 @@
-package ru.yandex.repinanr.randomtestdata.domain.usecases.bank
+package ru.yandex.repinanr.domain.usecases.bank
 
-import ru.yandex.repinanr.randomtestdata.domain.RandomDataRepository
+import ru.yandex.repinanr.randomtestdata.domain.repository.RandomDataRepository
 import javax.inject.Inject
 
 class GetSaveBanksUseCase @Inject constructor(

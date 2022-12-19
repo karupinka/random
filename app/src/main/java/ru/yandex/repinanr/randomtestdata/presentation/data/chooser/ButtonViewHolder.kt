@@ -23,9 +23,7 @@ class ButtonViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
         itemView.setOnClickListener {
             itemView.findNavController()
-                .navigate(ChooseFragmentDirections
-                    .actionChooseFragmentToDataFragment(buttonItem.type)
-                )
+                .navigate(ChooseFragmentDirections.actionChooseFragmentToDataFragment(buttonItem.type.ordinal))
         }
     }
 

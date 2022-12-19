@@ -1,14 +1,15 @@
-package ru.yandex.repinanr.dictionary.di
+package ru.yandex.repinanr.randomtestdata.di
 
-import dagger.Binds
 import dagger.Module
-import ru.yandex.repinanr.di.ApplicationScope
-import ru.yandex.repinanr.randomtestdata.domain.RandomDataRepository
-import ru.yandex.repinanr.randomtestdata.domain.repository.RandomDataRepositoryImpl
+import dagger.Provides
+import ru.yandex.repinanr.domain.repository.RandomDataRepositoryImpl
+import ru.yandex.repinanr.randomtestdata.domain.repository.RandomDataRepository
+import javax.inject.Singleton
 
 @Module
-interface RepositoryModule {
-    @Binds
-    @ApplicationScope
-    fun bindRepository(repositoryImpl: RandomDataRepositoryImpl): RandomDataRepository
+class RepositoryModule {
+    @Provides
+    @Singleton
+    fun bindRepository(repositoryImpl: RandomDataRepositoryImpl): RandomDataRepository =
+        repositoryImpl
 }

@@ -18,37 +18,37 @@ interface DataModule {
 
     companion object {
         @Provides
-        @ApplicationScope
+        @Singleton
         fun bindService(): RandomDataService {
             return ApiClient.apiService
         }
 
         @Provides
-        @ApplicationScope
+        @Singleton
         fun provideAppDb(application: Application): RandomDataDb {
             return RandomDataDb.getInstance(application)
         }
 
         @Provides
-        @ApplicationScope
+        @Singleton
         fun bindUserDao(application: Application): UserDao {
             return RandomDataDb.getInstance(application).getUserDao()
         }
 
         @Provides
-        @ApplicationScope
+        @Singleton
         fun bindCreditCardDao(application: Application): CardDao {
             return RandomDataDb.getInstance(application).getCreditCardDao()
         }
 
         @Provides
-        @ApplicationScope
+        @Singleton
         fun bindBankDao(application: Application): BankDao {
             return RandomDataDb.getInstance(application).getBankDao()
         }
 
         @Provides
-        @ApplicationScope
+        @Singleton
         fun bindAddressDao(application: Application): AddressDao {
             return RandomDataDb.getInstance(application).getAddressDao()
         }

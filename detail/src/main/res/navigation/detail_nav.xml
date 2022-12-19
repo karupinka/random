@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/dataFragment">
+
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="ru.yandex.repinanr.detail.presentation.DataFragment"
+        android:label="@string/detail_title" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <argument
+            android:name="type"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/detail_action"
+        app:destination="@id/dataFragment"
+        app:popUpTo="@id/dataFragment"
+        app:popUpToInclusive="true" />
+</navigation>

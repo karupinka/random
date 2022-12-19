@@ -1,18 +1,13 @@
 package ru.yandex.repinanr.randomtestdata
 
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.mockito.Mockito
 import org.robolectric.RobolectricTestRunner
 import ru.yandex.repinanr.randomtestdata.presentation.data.chooser.ButtonAdapter
 import ru.yandex.repinanr.randomtestdata.presentation.data.chooser.ButtonItem
-import ru.yandex.repinanr.randomtestdata.presentation.data.detail.*
+import ru.yandex.repinanr.randomtestdata.presentation.data.chooser.Datas
 
 @RunWith(RobolectricTestRunner::class)
 class ButtonAdapterTest {

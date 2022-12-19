@@ -1,4 +1,4 @@
-package ru.yandex.repinanr.randomtestdata.domain.model
+package ru.yandex.repinanr.domain.model
 
 sealed class DataModel {
     abstract val id: Long

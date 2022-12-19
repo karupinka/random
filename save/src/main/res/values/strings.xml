@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Приложение для генерации тестовых данных</string>
+    <string name="save_title">Сохраненные данные</string>
+
+    <!-- Data save -->
+    <string name="save_success">Данные сохранены</string>
+    <string name="save_no_success">Данные не сохранены</string>
+    <string name="copied">Данные скопированы</string>
+
+    <!-- Tab text -->
+    <string name="user_tab">Пользователи</string>
+    <string name="bank_tab">Банки</string>
+    <string name="credit_card_tab">Кредитные карты</string>
+    <string name="address_tab">Адреса</string>
+
+    <!-- Error stub -->
+    <string name="repeat_error">Повторить</string>
+    <string name="something_error">Что-то пошло не так</string>
+    <string name="server_error">Сейчас на сервере ошибка, попробуйте попробовать попозже</string>
+    <string name="internet_error">Кажется у вас проблемы с сетью</string>
+
+    <!-- Save screens -->
+    <string name="toast_remove_favorite_text">Данные удалены</string>
+    <string name="empty_save_data_text">Сохраненных данных нет. Для добавления нажмите кнопку \"Сохранить\" на экране деталей</string>
+</resources>

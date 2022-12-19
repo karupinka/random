@@ -8,33 +8,30 @@
     <fragment
         android:id="@+id/chooseFragment"
         android:name="ru.yandex.repinanr.randomtestdata.presentation.data.chooser.ChooseFragment"
-        android:label="@string/chooser_title"
+        android:label="@string/chooser_categoty_title"
         tools:layout="@layout/fragment_choose" >
         <action
             android:id="@+id/action_chooseFragment_to_dataFragment"
             app:destination="@id/dataFragment"
             app:popUpTo="@id/chooseFragment" />
     </fragment>
-    <fragment
+
+    <include-dynamic
         android:id="@+id/saveChooseFragment"
-        android:name="ru.yandex.repinanr.randomtestdata.presentation.save.chooser.SaveChooseFragment"
-        android:label="@string/save_bottom"
-        tools:layout="@layout/fragment_save_choose" >
-        <action
-            android:id="@+id/action_saveChooseFragment_to_dataFragment"
-            app:destination="@id/dataFragment"
-            app:popUpTo="@id/saveChooseFragment" />
-    </fragment>
-    <fragment
+        app:moduleName="save"
+        app:graphResName="save_choose" />
+
+    <include-dynamic
         android:id="@+id/dataFragment"
-        android:name="ru.yandex.repinanr.randomtestdata.presentation.data.detail.DataFragment"
-        android:label="@string/detail_title">
+        app:moduleName="detail"
+        app:graphResName="detail_nav">
         <argument
             android:name="id"
-            android:defaultValue="0L"
-            app:argType="long" />
+            app:argType="long"
+            android:defaultValue="0L" />
         <argument
             android:name="type"
-            app:argType="ru.yandex.repinanr.randomtestdata.presentation.data.detail.Datas" />
-    </fragment>
+            app:argType="integer" />
+    </include-dynamic>
+
 </navigation>

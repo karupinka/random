@@ -1,4 +1,4 @@
-package ru.yandex.repinanr.randomtestdata.domain
+package ru.yandex.repinanr.save.domain
 
 enum class DataTypes {
     USER,

@@ -1,0 +1,117 @@
+package ru.yandex.repinanr.save.presentation.card
+
+import android.content.Context
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.snackbar.Snackbar
+import ru.yandex.repinanr.randomtestdata.app.App
+import ru.yandex.repinanr.save.R
+import ru.yandex.repinanr.save.databinding.FragmentSaveDataBinding
+import ru.yandex.repinanr.save.di.DaggerSaveDataComponent
+import ru.yandex.repinanr.save.presentation.common.SaveDataAdapter
+import ru.yandex.repinanr.save.presentation.common.*
+import javax.inject.Inject
+
+class SaveCreditCardFragment : Fragment() {
+    private lateinit var binding: FragmentSaveDataBinding
+
+    @Inject
+    lateinit var adapter: SaveDataAdapter
+
+    @Inject
+    lateinit var viewModel: SaveCreditCardViewModel
+
+    private val component by lazy {
+        DaggerSaveDataComponent.factory().create((context?.applicationContext as App).component)
+    }
+
+    override fun onAttach(context: Context) {
+        component.inject(this)
+        super.onAttach(context)
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = FragmentSaveDataBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initAdapter()
+        viewModel.getSaveCreditCards()
+        binding.repeatButton.setOnClickListener {
+            viewModel.getSaveCreditCards()
+        }
+        viewModel.dataList.observe(viewLifecycleOwner) {
+            adapter.submitList(it)
+        }
+        viewModel.state.observe(viewLifecycleOwner) {
+            when (it) {
+                is InProgress -> {
+                    with(binding) {
+                        saveDataProgress.visibility = View.VISIBLE
+                        saveDataRecycler.visibility = View.GONE
+                        errorLayout.visibility = View.GONE
+                        emptyDataTextView.visibility = View.GONE
+                    }
+                }
+                is Error -> {
+                    with(binding) {
+                        saveDataProgress.visibility = View.GONE
+                        saveDataRecycler.visibility = View.GONE
+                        errorLayout.visibility = View.VISIBLE
+                        emptyDataTextView.visibility = View.GONE
+                    }
+                }
+                is Result -> {
+                    with(binding) {
+                        saveDataProgress.visibility = View.GONE
+                        saveDataRecycler.visibility = View.VISIBLE
+                        errorLayout.visibility = View.GONE
+                        emptyDataTextView.visibility = View.GONE
+                    }
+                }
+                is EmptyResult -> {
+                    with(binding) {
+                        saveDataProgress.visibility = View.GONE
+                        saveDataRecycler.visibility = View.GONE
+                        errorLayout.visibility = View.GONE
+                        emptyDataTextView.visibility = View.VISIBLE
+                    }
+                }
+                else -> {}
+            }
+        }
+    }
+
+    private fun initAdapter() {
+        binding.saveDataRecycler.adapter = adapter
+        binding.saveDataRecycler.layoutManager =
+            LinearLayoutManager(this@SaveCreditCardFragment.context)
+        adapter.setListener(object : SaveDataListener {
+            override fun onRemoveClickListener(id: Long) {
+                removeCreditCard(id)
+            }
+
+        })
+    }
+
+    private fun removeCreditCard(id: Long) {
+        viewModel.deleteCreditCard(id)
+        val snackbar =
+            Snackbar.make(
+                binding.root,
+                R.string.toast_remove_favorite_text,
+                Snackbar.LENGTH_LONG
+            )
+        snackbar.show()
+    }
+}

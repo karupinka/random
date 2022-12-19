@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Приложение для генерации тестовых данных</string>
+    <string name="detail_title">Данные</string>
+
+    <!-- User Screen -->
+    <string name="user_title">Пользователь</string>
+    <string name="user_password">Пароль</string>
+    <string name="user_first_name">Имя</string>
+    <string name="user_last_name">Фамилия</string>
+    <string name="user_username">Логин</string>
+    <string name="user_email">Email</string>
+    <string name="user_avatar">Аватар</string>
+    <string name="user_gender">Пол</string>
+    <string name="user_phone_number">Номер телефона</string>
+    <string name="user_social_insurance_number">Номер страховки</string>
+    <string name="user_date_of_birth">Дата рождения</string>
+
+    <!-- Bank Screen -->
+    <string name="bank_title">Банк</string>
+    <string name="account_number_title">Номер счёта</string>
+    <string name="iban_title">IBAN</string>
+    <string name="bank_name_title">Название банка</string>
+    <string name="routing_number_title">Направление</string>
+    <string name="swift_bic_title">BIC</string>
+
+    <!-- Credit Card Screen -->
+    <string name="credit_card_title">Кредитная карта</string>
+    <string name="credit_card_number">Номер карты</string>
+    <string name="credit_card_expiry_date">Срок действия</string>
+    <string name="credit_card_type">Тип карты</string>
+
+    <!-- Address Screen -->
+    <string name="address_title">Адрес</string>
+    <string name="address_city">Город</string>
+    <string name="address_street_name">Название улицы</string>
+    <string name="address_street_address">Адрес улицы</string>
+    <string name="address_secondary_address">Вторичный адрес</string>
+    <string name="address_building_number">Номер дома</string>
+    <string name="address_mail_box">Почтовый номер</string>
+    <string name="address_community">Сommunity</string>
+    <string name="address_zip_сode">Zip сode</string>
+    <string name="address_zip">Zip</string>
+    <string name="address_postcode">Почтовый индекс</string>
+    <string name="address_time_zone">Часовой пояс</string>
+    <string name="address_street_suffix">Street Suffix</string>
+    <string name="address_city_suffix">City Suffix</string>
+    <string name="address_city_prefix">City Prefix</string>
+    <string name="address_state">Регион / Штат</string>
+    <string name="address_state_abbr">Абревиатура региона / Штата</string>
+    <string name="address_country">Страна</string>
+    <string name="address_country_code">Код страны</string>
+    <string name="address_latitude">Latitude</string>
+    <string name="address_longitude">Longitude</string>
+    <string name="address_full_address">Полный адрес</string>
+
+    <!-- Bottom Navigation Bar -->
+    <string name="random_bottom">Рандомные</string>
+    <string name="save_bottom">Сохраненные</string>
+
+    <!-- Detail screen -->
+    <string name="save_menu_item">Сохранить</string>
+
+    <!-- Data save -->
+    <string name="save_success">Данные сохранены</string>
+    <string name="save_no_success">Данные не сохранены</string>
+    <string name="copied">Данные скопированы</string>
+
+    <!-- Tab text -->
+    <string name="user_tab">Пользователи</string>
+    <string name="bank_tab">Банки</string>
+    <string name="credit_card_tab">Кредитные карты</string>
+    <string name="address_tab">Адреса</string>
+
+    <!-- Error stub -->
+    <string name="repeat_error">Повторить</string>
+    <string name="something_error">Что-то пошло не так</string>
+    <string name="server_error">Сейчас на сервере ошибка, попробуйте попробовать попозже</string>
+    <string name="internet_error">Кажется у вас проблемы с сетью</string>
+
+    <!-- Save screens -->
+    <string name="toast_remove_favorite_text">Данные удалены</string>
+    <string name="empty_save_data_text">Сохраненных данных нет. Для добавления нажмите кнопку \"Сохранить\" на экране деталей</string>
+</resources>

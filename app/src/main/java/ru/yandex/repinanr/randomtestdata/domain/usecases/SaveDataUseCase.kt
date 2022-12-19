@@ -1,7 +1,7 @@
 package ru.yandex.repinanr.randomtestdata.domain.usecases
 
-import ru.yandex.repinanr.randomtestdata.domain.RandomDataRepository
-import ru.yandex.repinanr.randomtestdata.domain.model.*
+import ru.yandex.repinanr.domain.model.*
+import ru.yandex.repinanr.randomtestdata.domain.repository.RandomDataRepository
 import javax.inject.Inject
 
 class SaveDataUseCase @Inject constructor(
@@ -13,7 +13,6 @@ class SaveDataUseCase @Inject constructor(
             is BankModel -> repository.saveBank(dataModel)
             is CreditCardModel -> repository.saveCreditCard(dataModel)
             is UserModel -> repository.saveUser(dataModel)
-            else -> throw ClassCastException("Wrong class")
         }
     }
 }

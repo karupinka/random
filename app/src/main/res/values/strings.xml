@@ -89,4 +89,6 @@
     <!-- Save screens -->
     <string name="toast_remove_favorite_text">Данные удалены</string>
     <string name="empty_save_data_text">Сохраненных данных нет. Для добавления нажмите кнопку \"Сохранить\" на экране деталей</string>
+    <string name="title_detail">Detail</string>
+    <string name="title_save">save</string>
 </resources>

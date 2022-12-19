@@ -1,6 +1,5 @@
-package ru.yandex.repinanr.movies.ui.screens
+package ru.yandex.repinanr.ui.screens
 
-import androidx.annotation.StringRes
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches

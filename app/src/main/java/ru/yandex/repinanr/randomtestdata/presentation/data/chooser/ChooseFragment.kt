@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import ru.yandex.repinanr.randomtestdata.R
 import ru.yandex.repinanr.randomtestdata.app.App
 import ru.yandex.repinanr.randomtestdata.databinding.FragmentChooseBinding
-import ru.yandex.repinanr.randomtestdata.presentation.data.detail.Datas
 import javax.inject.Inject
 
 class ChooseFragment : Fragment() {

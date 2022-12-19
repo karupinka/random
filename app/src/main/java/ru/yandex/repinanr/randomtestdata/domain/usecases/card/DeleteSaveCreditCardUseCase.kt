@@ -1,6 +1,6 @@
-package ru.yandex.repinanr.randomtestdata.domain.usecases.card
+package ru.yandex.repinanr.domain.usecases.card
 
-import ru.yandex.repinanr.randomtestdata.domain.RandomDataRepository
+import ru.yandex.repinanr.randomtestdata.domain.repository.RandomDataRepository
 import javax.inject.Inject
 
 class DeleteSaveCreditCardUseCase @Inject constructor(

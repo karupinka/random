@@ -1,4 +1,4 @@
-package ru.yandex.repinanr.randomtestdata.domain.model
+package ru.yandex.repinanr.domain.model
 
 data class BankModel(
     override val id: Long,

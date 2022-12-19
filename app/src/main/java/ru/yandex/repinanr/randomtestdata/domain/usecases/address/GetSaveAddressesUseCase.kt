@@ -1,6 +1,6 @@
-package ru.yandex.repinanr.randomtestdata.domain.usecases.address
+package ru.yandex.repinanr.domain.usecases.address
 
-import ru.yandex.repinanr.randomtestdata.domain.RandomDataRepository
+import ru.yandex.repinanr.randomtestdata.domain.repository.RandomDataRepository
 import javax.inject.Inject
 
 class GetSaveAddressesUseCase @Inject constructor(

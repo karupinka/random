@@ -5,13 +5,13 @@ import ru.yandex.repinanr.randomtestdata.di.DaggerApplicationComponent
 
 class App : Application() {
 
-    val component by lazy {
-        DaggerApplicationComponent.factory().create(this)
-    }
-
     override fun onCreate() {
         super.onCreate()
         instance = this
+    }
+
+    val component by lazy {
+        DaggerApplicationComponent.factory().create(this)
     }
 
     companion object {

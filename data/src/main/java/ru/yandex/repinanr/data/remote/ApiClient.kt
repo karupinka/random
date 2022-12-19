@@ -6,16 +6,17 @@ import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import ru.yandex.repinanr.data.BuildConfig
 
 object ApiClient {
     private const val BASE_URL = "https://random-data-api.com/api/v2/"
 
     val client = OkHttpClient.Builder()
         .addInterceptor(HttpLoggingInterceptor().apply {
-            //if (BuildConfig.DEBUG) {
+            if (BuildConfig.DEBUG) {
                 level = HttpLoggingInterceptor.Level.HEADERS
                 level = HttpLoggingInterceptor.Level.BODY
-            //}
+            }
         })
         .addInterceptor(
             object : Interceptor {

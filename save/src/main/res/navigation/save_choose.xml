@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/saveChooseFragment">
+
+    <fragment
+        android:id="@+id/saveChooseFragment"
+        android:name="ru.yandex.repinanr.save.presentation.chooser.SaveChooseFragment"
+        android:label="@string/save_title" >
+        <action
+            android:id="@+id/action_saveChooseFragment_to_dataFragment"
+            app:destination="@id/dataFragment"
+            app:popUpTo="@id/saveChooseFragment" />
+    </fragment>
+    <action
+        android:id="@+id/saveChoose"
+        app:destination="@id/saveChooseFragment"
+        app:popUpTo="@id/saveChooseFragment" />
+
+    <include-dynamic
+        android:id="@+id/dataFragment"
+        app:moduleName="detail"
+        app:graphResName="detail_nav">
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <argument
+            android:name="type"
+            app:argType="integer" />
+    </include-dynamic>
+</navigation>

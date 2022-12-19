@@ -12,7 +12,6 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import ru.yandex.repinanr.randomtestdata.R
 import ru.yandex.repinanr.randomtestdata.databinding.ActivityMainBinding
 
-
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setupWithNavController(binding.bottomNavigation, navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.saveChooseFragment || destination.id == R.id.chooseFragment) {
+            if (destination.label == saveScreenLabel || destination.id == R.id.chooseFragment) {
                 binding.bottomNavigation.visibility = View.VISIBLE
             } else {
                 binding.bottomNavigation.visibility = View.GONE
@@ -47,5 +46,9 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    companion object {
+        private const val saveScreenLabel = "Сохраненные данные"
     }
 }

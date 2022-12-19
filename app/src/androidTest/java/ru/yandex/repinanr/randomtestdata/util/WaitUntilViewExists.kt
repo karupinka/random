@@ -14,8 +14,8 @@ import androidx.test.runner.lifecycle.Stage
 import org.hamcrest.Matcher
 import ru.yandex.repinanr.movies.ui.util.AssertDisplayed.viewIsDisplayed
 import ru.yandex.repinanr.movies.ui.util.WaitForViewMatcher.waitForClickableViewMatcher
-import java.util.concurrent.TimeoutException
 import ru.yandex.repinanr.movies.ui.util.WaitForViewMatcher.waitForViewMatcher
+import java.util.concurrent.TimeoutException
 
 const val timeoutDefault: Long = 5000
 

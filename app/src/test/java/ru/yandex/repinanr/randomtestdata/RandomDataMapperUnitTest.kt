@@ -1,21 +1,21 @@
 package ru.yandex.repinanr.randomtestdata
 
-import org.junit.Test
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
-import ru.yandex.repinanr.randomtestdata.domain.mapper.RandomDataMapper
-import ru.yandex.repinanr.randomtestdata.data.model.address.AddressEntity
-import ru.yandex.repinanr.randomtestdata.data.model.address.AddressResponse
-import ru.yandex.repinanr.randomtestdata.data.model.bank.BankEntity
-import ru.yandex.repinanr.randomtestdata.data.model.bank.BankResponse
-import ru.yandex.repinanr.randomtestdata.data.model.card.CreditCardEntity
-import ru.yandex.repinanr.randomtestdata.data.model.card.CreditCardResponse
-import ru.yandex.repinanr.randomtestdata.data.model.common.AddressModel
-import ru.yandex.repinanr.randomtestdata.data.model.common.BankModel
-import ru.yandex.repinanr.randomtestdata.data.model.common.CreditCardModel
-import ru.yandex.repinanr.randomtestdata.data.model.common.UserModel
-import ru.yandex.repinanr.randomtestdata.data.model.user.ResponseUserModel
-import ru.yandex.repinanr.randomtestdata.data.model.user.UserEntity
+import org.junit.Test
+import ru.yandex.repinanr.data.model.address.AddressEntity
+import ru.yandex.repinanr.data.model.address.AddressResponse
+import ru.yandex.repinanr.data.model.bank.BankEntity
+import ru.yandex.repinanr.data.model.bank.BankResponse
+import ru.yandex.repinanr.data.model.card.CreditCardEntity
+import ru.yandex.repinanr.data.model.card.CreditCardResponse
+import ru.yandex.repinanr.data.model.user.ResponseUserModel
+import ru.yandex.repinanr.data.model.user.UserEntity
+import ru.yandex.repinanr.domain.mapper.RandomDataMapper
+import ru.yandex.repinanr.domain.model.AddressModel
+import ru.yandex.repinanr.domain.model.BankModel
+import ru.yandex.repinanr.domain.model.CreditCardModel
+import ru.yandex.repinanr.domain.model.UserModel
 
 class RandomDataMapperUnitTest {
     private lateinit var randomDataMapper: RandomDataMapper

@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Random test data"
 include ':app'
+include ':data'
+include ':detail'
+include ':save'

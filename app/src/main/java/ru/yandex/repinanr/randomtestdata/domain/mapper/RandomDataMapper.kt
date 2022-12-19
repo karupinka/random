@@ -1,4 +1,4 @@
-package ru.yandex.repinanr.randomtestdata.domain.mapper
+package ru.yandex.repinanr.domain.mapper
 
 import ru.yandex.repinanr.data.model.address.AddressEntity
 import ru.yandex.repinanr.data.model.address.AddressResponse
@@ -8,10 +8,10 @@ import ru.yandex.repinanr.data.model.card.CreditCardEntity
 import ru.yandex.repinanr.data.model.card.CreditCardResponse
 import ru.yandex.repinanr.data.model.user.ResponseUserModel
 import ru.yandex.repinanr.data.model.user.UserEntity
-import ru.yandex.repinanr.randomtestdata.domain.model.AddressModel
-import ru.yandex.repinanr.randomtestdata.domain.model.BankModel
-import ru.yandex.repinanr.randomtestdata.domain.model.CreditCardModel
-import ru.yandex.repinanr.randomtestdata.domain.model.UserModel
+import ru.yandex.repinanr.domain.model.AddressModel
+import ru.yandex.repinanr.domain.model.BankModel
+import ru.yandex.repinanr.domain.model.CreditCardModel
+import ru.yandex.repinanr.domain.model.UserModel
 import javax.inject.Inject
 
 class RandomDataMapper @Inject constructor() {

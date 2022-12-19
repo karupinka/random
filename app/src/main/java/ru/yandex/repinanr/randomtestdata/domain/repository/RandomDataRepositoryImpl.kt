@@ -1,18 +1,20 @@
-package ru.yandex.repinanr.randomtestdata.domain.repository
+package ru.yandex.repinanr.domain.repository
 
 import ru.yandex.repinanr.data.remote.RandomDataService
 import ru.yandex.repinanr.data.room.address.AddressDao
 import ru.yandex.repinanr.data.room.bank.BankDao
 import ru.yandex.repinanr.data.room.card.CardDao
 import ru.yandex.repinanr.data.room.user.UserDao
-import ru.yandex.repinanr.randomtestdata.domain.RandomDataRepository
-import ru.yandex.repinanr.randomtestdata.domain.mapper.RandomDataMapper
-import ru.yandex.repinanr.randomtestdata.domain.model.AddressModel
-import ru.yandex.repinanr.randomtestdata.domain.model.BankModel
-import ru.yandex.repinanr.randomtestdata.domain.model.CreditCardModel
-import ru.yandex.repinanr.randomtestdata.domain.model.UserModel
+import ru.yandex.repinanr.domain.mapper.RandomDataMapper
+import ru.yandex.repinanr.domain.model.AddressModel
+import ru.yandex.repinanr.domain.model.BankModel
+import ru.yandex.repinanr.domain.model.CreditCardModel
+import ru.yandex.repinanr.domain.model.UserModel
+import ru.yandex.repinanr.randomtestdata.domain.repository.RandomDataRepository
 import javax.inject.Inject
+import javax.inject.Singleton
 
+@Singleton
 class RandomDataRepositoryImpl @Inject constructor(
     private val mapper: RandomDataMapper,
     private val service: RandomDataService,
