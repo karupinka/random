@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Приложение для генерации тестовых данных</string>
+    <string name="app_name">Генератор тестовых данных</string>
     <string name="detail_title">Данные</string>
 
     <!-- User Screen -->

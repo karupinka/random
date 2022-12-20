@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Приложение для генерации тестовых данных</string>
+    <string name="app_name">Генератор тестовых данных</string>
     <string name="save_title">Сохраненные данные</string>
 
     <!-- Data save -->
@@ -10,7 +10,7 @@
     <!-- Tab text -->
     <string name="user_tab">Пользователи</string>
     <string name="bank_tab">Банки</string>
-    <string name="credit_card_tab">Кредитные карты</string>
+    <string name="credit_card_tab">Карты</string>
     <string name="address_tab">Адреса</string>
 
     <!-- Error stub -->

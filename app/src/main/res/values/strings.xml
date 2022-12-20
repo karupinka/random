@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Приложение для генерации тестовых данных</string>
+    <string name="app_name">Генератор тестовых данных</string>
 
     <!-- Chooser Screen -->
     <string name="chooser_description">Для генерации тестовых данных необходимо выбрать из списка вид тестовых данных категорию.</string>
